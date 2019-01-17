@@ -5,7 +5,7 @@ import Vote from "./components/vote.component";
 class App extends Component {
   state = { votes: 0 };
 
-  addChildVote = () => {
+  addVote = () => {
     console.log("Vote was clicked.");
     const newTotal = this.state.votes + 1;
     this.setState({ votes: newTotal });
@@ -24,7 +24,7 @@ class App extends Component {
             </Card.Header>
           </Card.Content>
         </Card>
-        <Vote onClick={this.addChildVote} />
+        <Vote onClick={this.addVote} />
       </div>
     );
   }
