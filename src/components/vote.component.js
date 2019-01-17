@@ -6,14 +6,9 @@ class Vote extends React.Component {
     return (
       <Card centered>
         <Card.Content>
-          <div className="ui two buttons">
-            <Button basic color="green">
-              Approve
-            </Button>
-            <Button basic color="red">
-              Decline
-            </Button>
-          </div>
+          <Button fluid color="green" onClick={this.props.onClick}>
+            Approve
+          </Button>
         </Card.Content>
       </Card>
     );

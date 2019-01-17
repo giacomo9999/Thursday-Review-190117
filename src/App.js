@@ -1,9 +1,15 @@
 import React, { Component } from "react";
-import { Card, Button } from "semantic-ui-react";
+import { Card } from "semantic-ui-react";
 import Vote from "./components/vote.component";
 
 class App extends Component {
   state = { votes: 0 };
+
+  addChildVote = () => {
+    console.log("Vote was clicked.");
+    const newTotal = this.state.votes + 1;
+    this.setState({ votes: newTotal });
+  };
 
   render() {
     return (
@@ -18,7 +24,7 @@ class App extends Component {
             </Card.Header>
           </Card.Content>
         </Card>
-        <Vote />
+        <Vote onClick={this.addChildVote} />
       </div>
     );
   }
