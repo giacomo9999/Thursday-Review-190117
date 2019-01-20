@@ -11,7 +11,10 @@ class App extends Component {
     ]
   };
 
-  // addVote function adds vote from DistrictVote component to appropriate district total in App's state, and is passed down from App to DistrictVote component as the attribute 'onVote'. The 'districtId' argument is passed down to DistrictVote component as "id" in props, and passed back up to App by handleClick function in DistrictVote component.
+  // addVote function adds vote from DistrictVote component to appropriate district total in App's state, and
+  // is passed down from App to DistrictVote component as the attribute 'onVote'. 
+  // The 'districtId' argument is passed down to DistrictVote component as "id" in props, and passed
+  // back up to App by handleClick function in DistrictVote component.
   addVote = districtId => {
     console.log(
       "Vote was clicked from " + this.state.districts[districtId].name
